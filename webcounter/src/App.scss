@@ -5,39 +5,80 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  padding: 2rem;
+  text-align: center;
+
+  .counter-label {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .counter-zero {
+      color: #ef4444; 
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .counter-number {
+      color: #10b981;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+
+  .basic-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    background-color: #3b82f6;
+    color: white;
+
+    &:hover {
+      background-color: #2563eb;
+    }
+
+    &:active {
+      background-color: #10b981;
+      transform: scale(0.95);
+    }
+
+    &.reset-button {
+      background-color: #f59e0b;
+
+      &:hover {
+        background-color: #d97706;
+      }
+
+      &:active {
+        background-color: #ef4444;
+      }
+    }
+  }
+
+  .center-div {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #10b981;
+  }
 }
 
-
-.read-the-docs {
-  color: #888;
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3b82f6;
 }
